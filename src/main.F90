@@ -37,29 +37,30 @@ program main
     ! fill matrix
     call fill_matrix(A, n, h)
 
-    print *, "h = ", h
-    print *, "Referential values vector:"
-    call print_rvec(REF, n)
-    print *, "Right side vector:"
-    call print_vec(X, n)
-    print *, "Matrix:"
-    call print_matrix(A, n)
+    ! print *, "h = ", h
+    ! print *, "Referential values vector:"
+    ! call print_rvec(REF, n)
+    ! print *, "Right side vector:"
+    ! call print_vec(X, n)
+    ! print *, "Matrix:"
+    ! call print_matrix(A, n)
 
-    print *, "Eliminating..."
+    ! print *, "Eliminating..."
     call eliminate(A, X, n)
 
-    print *, "Matrix after elimination (should be identity matrix):"
-    call print_matrix(A, n)
+    ! print *, "Matrix after elimination (should be identity matrix):"
+    ! call print_matrix(A, n)
 
-    print *, "Result:"
-    call print_vec(X, n)
+    ! print *, "Result:"
+    ! call print_vec(X, n)
 
     ERR(:) = X - REF
-    print *, "Error values:"
+    ! print *, "Error values:"
     call print_rvec(ERR, n)
-    print *, "kind: ", my_KIND
-    print *, "n: ", n
-    print *, "Avg error: ", (SUM(ABS(ERR)) / n)
+    ! print *, "kind: ", my_KIND
+    ! print *, "n: ", n
+    ! print *, "Avg error: ", (SUM(ABS(ERR)) / n)
+    print *, my_KIND, n, (SUM(ABS(ERR)) / n)
 
     if (allocated(A)) deallocate(A)
     if (allocated(X)) deallocate(X)

@@ -15,8 +15,8 @@ subroutine print_vec(V, n)
     real(kind = my_KIND), intent(in) :: V(0:n)
     integer(kind = 8) :: i
 
-    do i = 0, n
-        print *, i, ": ", V(i)
+    do i = 1, n - 1
+        print *, my_KIND, i, V(i)
     end do
 end subroutine print_vec
 
@@ -25,8 +25,8 @@ subroutine print_rvec(V, n)
     real(kind = ref_KIND), intent(in) :: V(0:n)
     integer(kind = 8) :: i
 
-    do i = 0, n
-        print *, i, ": ", V(i)
+    do i = 1, n - 1
+        print *, my_KIND, i, V(i)
     end do
 end subroutine print_rvec
 
@@ -36,8 +36,8 @@ subroutine print_matrix(A, n)
     real(kind = my_KIND), intent(in) :: A(0:n, 0:n)
     integer(kind = 8) :: i
 
-    do i = 0, n
-        print *, i, ": ", A(:, i)
+    do i = 1, n - 1
+        print *, my_KIND, i, A(:, i)
     end do
 end subroutine print_matrix
 

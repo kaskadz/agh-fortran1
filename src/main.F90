@@ -1,4 +1,3 @@
-
 program main
     use utils
     use gauss
@@ -7,7 +6,21 @@ program main
     real(kind = my_KIND), allocatable, dimension(:) :: X
     real(kind = my_KIND) :: h
     real(kind = ref_KIND), allocatable, dimension(:) :: ERR, REF
-    integer(kind=8) :: n = 10
+    integer(kind=8) :: n, read_status
+    character(len=100) :: param
+
+    if (command_argument_count() .EQ. 1) then
+        call get_command_argument(1, param)
+    else 
+        print *, "No n (number of elements) given!"
+        error stop
+    end if
+    
+    read(param, *, iostat=read_status) n
+    if (read_status .NE. 0) then
+        print *, "Error parsing parameter!"
+        error stop
+    end if
   
     allocate(A(0:n, 0:n))
     allocate(X(0:n))

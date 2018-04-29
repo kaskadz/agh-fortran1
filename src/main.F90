@@ -56,7 +56,7 @@ program main
 
     ERR(:) = X - REF
     ! print *, "Error values:"
-    call print_rvec(ERR, n)
+    !call print_rvec(ERR, n)
     ! print *, "kind: ", my_KIND
     ! print *, "n: ", n
     ! print *, "Avg error: ", (SUM(ABS(ERR)) / n)

@@ -13,4 +13,5 @@ The program solves differential equation of heat transport and calculates error 
 
 ### Output
 Output is a list of: `<kind> <i> <error>`
+
 The last line is: `<kind> <n> <average error>`

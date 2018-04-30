@@ -6,7 +6,8 @@ _First assignment for fortran academic course._
 The program solves differential equation of heat transport and calculates error relative to expected result.
 
 ## Build
-`make all KIND=x` where `x` is desired kind (4, 8, 16)
+`make all KIND=x` where `x` is desired kind (4, 8, 16).
+`./out/mainx` is produced.
 
 ## Usage
 `./out/main n` where `n` is range resolution.

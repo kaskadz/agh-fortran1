@@ -15,3 +15,7 @@ The program solves differential equation of heat transport and calculates error 
 Output is a list of: `<kind> <i> <error>`
 
 The last line is: `<kind> <n> <average error>`
+
+## Results
+
+Graphs of error results for different kinds are to be found in Plots.ipynb notebook (can be viwed via GitHub).
